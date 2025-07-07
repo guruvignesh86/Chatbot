@@ -1,13 +1,13 @@
 import { useState } from "react";
-import Chatbot from "./Chatbot"; // adjust the import path if needed
-import { MessageCircle } from "lucide-react"; // Optional: You can use any icon library
+import Chatbot from "./Chatbot"; 
+import { MessageCircle } from "lucide-react"; 
 
 const ChatWidget = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      {/* Toggle Button */}
+
       <div className="fixed bottom-6 right-6 z-50">
         <button
           className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition"
