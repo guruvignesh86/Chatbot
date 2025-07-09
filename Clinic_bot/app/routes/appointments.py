@@ -41,12 +41,8 @@ def book_appointment():
     except ValueError:
         return jsonify({"error": "Invalid time format. Use 'HH:MM AM/PM' (e.g., 10:30 AM or 3:00 PM)."}), 400
 
-    # ✅ Prevent Double Booking
-    existing = Appointment.query.filter_by(preferred_date=date_str, preferred_time=time_str).first()
-    if existing:
-        return jsonify({
-            "error": "This time slot is already booked. Please choose another."
-        }), 409
+    
+    
 
     # ✅ Save to DB
     appointment = Appointment(
